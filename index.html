@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELDIMON</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Moda Demoniaca</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>¡Bienvenido a la Tienda de Camisas ElDimon!</h2>
+        <p>Encuentra las mejores camisas para cada ocasión.</p>
+    </section>
+
+    <div class="productos">
+        <div class="producto">
+            <img src="imagenes/camisa1.jpg" alt="Camisa 1">
+            <h3>chaqueta</h3>
+            <p>60.000</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes/camisa2.jpg" alt="Camisa 2">
+            <h3>Camisa</h3>
+            <p>35.000</p>
+            <button>Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="imagenes/camisa3.jpg" alt="Camisa 3">
+            <h3>Buzo</h3>
+            <p>45.000</p>
+            <button>Comprar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ElDimon. Todos los derechos reservados.</p>
+    </footer>
+
+<script>
+    // Seleccionamos todos los botones de compra
+    const botones = document.querySelectorAll('.producto button');
+
+    // Añadimos un evento de clic a cada botón
+    botones.forEach(boton => {
+        boton.addEventListener('click', function() {
+            // Añadimos la clase 'active' al botón clickeado
+            boton.classList.add('active');
+            
+            // Opcional: Si quieres que el cambio de color vuelva al original después de un tiempo, puedes hacerlo así:
+            setTimeout(() => {
+                boton.classList.remove('active');
+            }, 250); // El color volverá al original después de 1 segundo
+        });
+    });
+</script>
+</body>
+</html>
